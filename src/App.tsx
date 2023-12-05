@@ -90,11 +90,8 @@ const FormPage = ({ onSubmit }: { onSubmit: (data: UserData) => void }) => {
 };
 
 const App = () => {
-  const [userDetails, setUserDetails] = useState<UserData | null>(null);
-
   const handleFormSubmit = (data: UserData) => {
     localStorage.setItem('userDetails', JSON.stringify(data));
-    setUserDetails(data);
   };
 
   return (
@@ -103,5 +100,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App;
