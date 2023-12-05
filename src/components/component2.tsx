@@ -68,10 +68,8 @@ const Component2: React.FC = () => {
           const isNodeSelected = prev.includes(nodeId);
       
           if (isNodeSelected) {
-            // Node is already selected, so deselect it
             return prev.filter((id) => id !== nodeId);
           } else {
-            // Node is not selected, so select it
             return [nodeId];
           }
         });
@@ -92,25 +90,24 @@ const Component2: React.FC = () => {
       />
     );
   
-    // Hardcoded tree data
     const treeData: TreeNode[] = [
       {
         id: 1,
-        label: 'Department 1',
+        label: 'Customer_service',
         children: [
-          { id: 2, label: 'Sub-Department 1.1' },
-          { id: 3, label: 'Sub-Department 1.2' },
+          { id: 2, label: 'Support' },
+          { id: 3, label: 'Customer_success' },
         ],
       },
       {
         id: 4,
-        label: 'Department 2',
+        label: 'Design',
         children: [
-          { id: 5, label: 'Sub-Department 2.1' },
-          { id: 6, label: 'Sub-Department 2.2' },
+          { id: 5, label: 'Graphic_design' },
+          { id: 6, label: 'Product_design' },
+          { id: 7, label: 'Web_design' },
         ],
       },
-      // Add more departments and sub-departments as needed
     ];
   
     return <div>{treeData.map(renderTree)}</div>;

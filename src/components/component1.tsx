@@ -20,7 +20,7 @@ const Component1: React.FC = () => {
   const [posts, setPosts] = React.useState<PostData[]>([]);
 
   React.useEffect(() => {
-    // Fetch data from the API endpoint
+    
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => response.json())
       .then((data) => setPosts(data))
